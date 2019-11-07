@@ -8,7 +8,7 @@
 	<!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Free style CSS -->
-    <style type="text/css">	
+    <style type="text/css">
     	section{
 			padding: 50px 0;
 			position: relative;
@@ -21,7 +21,7 @@
 		}
 		a{
 			color: #555;
-		}		
+		}
 		a:hover{
 			color: #00c9b2;
 			text-decoration: none;
@@ -36,7 +36,7 @@
 			padding: 0;
 			position: relative;
 		}
-		.thumb-text{	
+		.thumb-text{
 			padding: 15px;
 		}
 		p.rss-text{
@@ -51,16 +51,16 @@
 	<section class="grey">
 		<div class="container">
 		<h2 class="text-center">Latest news from us</h2>
-		<p class="lead text-center">Tutorial: <a class="tut-link" href="https://funnyreino.com/simple-rss-feed-ajax/" target="_blank">Making RSS simple section with AJAX</a></p>
+		<p class="lead text-center">Tutorial: <a class="tut-link" href="https://anhkarppinen.com/simple-rss-feed-ajax/" target="_blank">Making RSS simple section with AJAX</a></p>
 			<div class="row">
 				<div id="err"></div>
-				<div class="timeline">			
+				<div class="timeline">
 				</div>
 			</div>
 		</div>
-		<div class="clearfix"></div>	
+		<div class="clearfix"></div>
 	</section>
-	
+
 	<!-- Load jQuery for AJAX use -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -70,7 +70,7 @@
 			var title, link, intro, published;
 			//xml news feed
 			$.ajax({
-				url: 'https://funnyreino.com/feed/',
+				url: 'https://anhkarppinen.com/feed/',
 				dataType: 'xml',
 				success: function(data){
 					data = $(data).find('channel item').slice(0, 3);
@@ -79,7 +79,7 @@
 						link = $(this).find('link').text();
 						intro = $(this).find('description').text();
 						published = $(this).find('pubDate').text().slice(0, 17);
-						
+
 						//append 1 thumbnail for each news
 						$('.timeline').append(
 							"<div class='col-md-4'>"+
